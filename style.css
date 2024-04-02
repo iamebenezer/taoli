@@ -1,0 +1,25 @@
+.glow-border {  
+    position:relative;
+}
+.glow-border::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    animation: glow 1.5s infinite alternate; /* Adjust duration and other animation properties as needed */
+}
+/* Glowing animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 0 rgba(109, 47, 243, 0.7); /* Initial shadow */
+    }
+    50% {
+        box-shadow: 0 0 8px 16px rgba(191, 72, 253, 0.7); /* Medium intensity */
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgba(199, 237, 210, 0.7); /* Strongest intensity */
+    }
+}
