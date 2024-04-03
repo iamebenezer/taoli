@@ -34,6 +34,51 @@
     }
 </style>
 <body>
+   <!-- Navbar -->
+   <nav class="bg-gray-800" style="background-image: radial-gradient(circle, #00de8e, #00dda9, #00dbc0, #00d7d2, #00d3de, #00ceec, #00c7f7, #00bfff, #00afff, #2c98ff, #9373ff, #dc1fff);">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#" class="text-white text-lg font-semibold">Logo</a>
+      <!-- Menu -->
+      <div class="hidden md:block">
+        <ul class="flex space-x-4 text-black head">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">About</a></li>
+          <li><a href="#" class="hover:text-gray-300">Tokenomics</a></li>
+          <li><a href="#" class="hover:text-gray-300">Roadmap</a></li>
+        </ul>
+      </div>
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden head bg-gray-800">
+      <ul class="flex flex-col space-y-4 px-4 py-2">
+        <li><a href="#" class="block text-black hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="block text-black hover:text-gray-300">About</a></li>
+        <li><a href="#" class="block text-black hover:text-gray-300">Tokenomics</a></li>
+        <li><a href="#" class="block text-black hover:text-gray-300">Roadmap</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- JavaScript for toggling mobile menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
     <video src="/video.mp4" autoplay  class="w-screen h-screen object-cover" muted loop playsinline>
     </video>
     <section class=" absolute top-0 bottom-0 flex flex-col justify-center items-center left-0 right-0 w-screen h-screen ">
@@ -44,12 +89,14 @@
       </div>
       <div class="flex  flex-col justify-center items-center" data-aos="fade-up"
       data-aos-anchor-placement="bottom-bottom">
-        <h1 class="head text-white md:text-[50px] text-[30px] text-center text-shadow">WELCOME TO TAOlie</h1>
+        <h1 class="head text-white md:text-[50px] text-[30px] text-center text-shadow pulse">WELCOME TO TAOlie</h1>
         <p class="text-white texts text-[20px] text-center">MEMECOIN X ARTIFICIAL INTELLIGENCE.</p>
         <div class="space-y-3 md:space-x-7 flex flex-col md:flex-row justify-center items-center">
         <a href="" class="bg-white px-6 py-1 rounded-lg head">Buy Now</a>
         <a href="" class="bg-white px-6 py-1 rounded-lg head">Chart</a>
         <a href="" class="bg-white px-6 py-1 rounded-lg head">Telegram</a>
+        <a href="" class="bg-white px-6 py-1 rounded-lg head">RENT GPUS</a>
+        <a href="" class="bg-white px-6 py-1 rounded-lg head">PROVIDE COMPUTE</a>
     </div>
       </div>
     </div>
@@ -58,6 +105,22 @@
     html, body{
         overflow-x: hidden;
     }
+    @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .pulse {
+
+    animation: pulse 2s infinite;
+  }
 </style>
     <section class="p-8 w-screen" style="background-image: radial-gradient(circle, #00de8e, #00dda9, #00dbc0, #00d7d2, #00d3de, #00ceec, #00c7f7, #00bfff, #00afff, #2c98ff, #9373ff, #dc1fff);">
                 <div class="flex justify-center items-center" data-aos="fade-up"
@@ -66,7 +129,7 @@
                 </div>
                 <div class="p-12 grid grid-cols-1 md:grid-cols-2 place-items-center" data-aos="fade-left"
                 data-aos-duration="1000">
-                    <div class="bg-[url(/bg-1.png)] h-fit w-96 bg-cover bg-no-repeat md:w-[700px] p-6 rounded-lg">
+                    <div class="bg-[url(/bg-1.png)] h-fit w-96 gap-8 bg-cover bg-no-repeat md:w-[700px] p-6 rounded-lg">
                         <p class="text-white texts text-center md:text-start"
                         >
                         <strong> MEMECOIN X ARTIFICIAL INTELLIGENCE </strong>
@@ -148,7 +211,7 @@ TO DATE, WE HAVE BEEN RUNNING A PROOF OF CONCEPT, SUPPLYING COMPUTE RESOURCES WI
     </div>
     
     <div class="p-12 grid grid-cols-1 gap-8 md:grid-cols-3 place-items-center">
-        <div class="glow-border w-96s md:w-fit h-fit bg-[url('./bg-1.png')] rounded-md p-4 text-white" data-aos="flip-right" data-aos-duration="200">
+        <div class="glow-border w-96 md:w-fit h-fit bg-[url('./bg-1.png')] rounded-md p-4 text-white" data-aos="flip-right" data-aos-duration="200">
             <h1 class="head py-3">PHASE 1: WEBSITE LAUNCH</h1>
             <p class="texts">COMPUTE WEBSITE LAUNCH
                 LAUNCH WEBSITE FOR DECENTRALIZED AI COMPUTE AND RENDERING THE METAVERSE. INTRODUCE STAKING THAT WILL ALLOW TAOlie HOLDERS TO EARN 70% OF ECOSYSTEM REVENUES.
@@ -157,7 +220,7 @@ TO DATE, WE HAVE BEEN RUNNING A PROOF OF CONCEPT, SUPPLYING COMPUTE RESOURCES WI
                 USERS WILL BE ABLE TO DEPLOY INSTANCES ON THE BITTENSOR SUBENTS WITH PAYMENT IN TAOlie TOKENS ALLOWING USERS TO
                 BEGIN EARNING TAO IN MINUTES AT THE CLICK OF A BUTTON.</p>
         </div>
-        <div class="glow-border w-80 md:w-fit h-fit bg-[url('./bg-1.png')] rounded-md p-4 text-white" data-aos="flip-right" data-aos-duration="200">
+        <div class="glow-border w-96 md:w-fit h-fit bg-[url('./bg-1.png')] rounded-md p-4 text-white" data-aos="flip-right" data-aos-duration="200">
             <h1 class="head py-3">PHASE 2: BRIDGE</h1>
             <p class="texts">
                 LAUNCH A BRIDGE ENABLING SMOOTH SAILING OF ASSETS TO AND FROM THE SOLANA, BITTENSOR, ETHEREUM AND OTHER MAJOR BLOCKCHAINS.
