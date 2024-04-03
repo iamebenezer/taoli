@@ -37,3 +37,48 @@
       transform: translateY(-20px);
     }
   }
+
+  @keyframes twinkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .twinkle-btn {
+    padding: 10px 20px;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    animation: twinkle 1.5s infinite;
+  }
+
+  .twinkle-btn:hover {
+    animation: none; /* Disable animation on hover */
+    background-color: #0056b3;
+  }
+
+  .glow-border-btn {  
+    position:relative;
+}
+.glow-border-btn::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    animation: glow 1.5s infinite alternate; /* Adjust duration and other animation properties as needed */
+}
+/* Glowing animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 0 rgba(109, 47, 243, 0.7); /* Initial shadow */
+    }
+    50% {
+        box-shadow: 0 0 8px 6px rgba(191, 72, 253, 0.7); /* Medium intensity */
+    }
+    100% {
+        box-shadow: 0 0 10px 6px rgba(199, 237, 210, 0.7); /* Strongest intensity */
+    }
+}
