@@ -32,6 +32,102 @@
     .text-shadow{
         text-shadow: 2px 1px 6px #320045;
     }
+    .z{
+      z-index: -100%;
+    }
+    .glow {
+      font-size: 36px;
+      color: #8a2be2; /* Purple color */
+      text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 0 0 50px #8a2be2, 0 0 60px #8a2be2, 0 0 70px #8a2be2;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 0 0 50px #8a2be2, 0 0 60px #8a2be2, 0 0 70px #8a2be2;
+      }
+
+      to {
+        text-shadow: 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 0 0 50px #8a2be2, 0 0 60px #8a2be2, 0 0 70px #8a2be2, 0 0 80px #8a2be2;
+      }
+    }
+
+</style>
+<body>
+  <nav class="bg-[url(/bg-1.png)] bg-cover bg-no-repeat p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#" class="text-white space-x-2 text-lg head font-bold text-center flex justify-center items-center">
+                <img src="/logo-2.png" class="w-12" alt=""> TAOLIE
+            </a>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex space-x-4 head">
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="index.html#token" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
+            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
+        
+          </div>
+          
+    </div>
+</nav>
+
+<div id="mobile-menu" class="md:hidden head bg-black text-center p-4 hidden">
+    <a href="index.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+    <a href="index.html#about" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">About</a>
+    <a href="index.html#token" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
+    <a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
+</div>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Move this section below the navbar -->
+<section class="absolute top-10 bottom-0 flex flex-col justify-center items-center left-0 right-0 w-screen h-screen ">
+    <div class="flex flex-col justify-center items-center" data-aos="fade-up"
+    data-aos-duration="3000">
+    <div class="">
+    <img src="/logo-2.png" class="w-80 animate__animated animate__bounce animate__repeat-2 pulse" alt="">
+  </div>
+  <div class="flex  flex-col justify-center items-center" data-aos="fade-up"
+  data-aos-anchor-placement="bottom-bottom">
+    <h1 class="head text-white md:text-[50px] text-[30px] text-center text-shadow pulse glow">COMING SOON
+      <br>
+      (DAPPS)
+    </h1>
+    <p class="text-white texts text-[20px] text-center">MEMECOIN X ARTIFICIAL INTELLIGENCE.</p>
+    <!-- <div class="space-y-3 md:space-x-7 flex flex-col md:flex-row justify-center items-center">
+    <a href="" class="bg-white px-6 py-1 rounded-lg head">Buy Now</a>
+    <a href="" class="bg-white px-6 py-1 rounded-lg head">Chart</a>
+    <a href="" class="bg-white px-6 py-1 rounded-lg head">Telegram</a>
+    <a href="" class="bg-white px-6 py-1 rounded-lg head">RENT GPUS</a>
+    <a href="" class="bg-white px-6 py-1 rounded-lg head">PROVIDE COMPUTE</a>
+</div> -->
+  </div>
+</div>
+</section>
+
+<video src="/video-2.mp4" autoplay  class="w-screen h-screen object-cover" muted loop playsinline>
+</video>  
+<style>
+    html, body{
+        overflow-x: hidden;
+    }
     @keyframes pulse {
     0% {
       transform: scale(1);
@@ -45,32 +141,16 @@
   }
 
   .pulse {
-   
+
     animation: pulse 2s infinite;
   }
 </style>
-<body>
-    <video src="/video.mp4" autoplay  class="w-screen h-screen object-cover" muted loop playsinline>
-    </video>
-    <section class=" flex flex-col justify-center items-center left-0 right-0 w-screen h-screen ">
-        <div class="flex flex-col justify-center items-center" data-aos="fade-up"
-        data-aos-duration="3000">
-        <div class="">
-        <img src="/main.png" class="w-60 animate__animated animate__bounce animate__repeat-2" alt="">
-      </div>
-      <div class="flex  flex-col justify-center items-center" data-aos="fade-up"
-      data-aos-anchor-placement="bottom-bottom">
-        <h1 class="head text-white md:text-[50px] text-[30px] text-center text-shadow pulse">WELCOME TO TAOlie</h1>
-        <p class="text-black texts text-[20px] text-center">MEMECOIN X ARTIFICIAL INTELLIGENCE.</p>
-        <div class="space-y-3 md:space-x-7 flex flex-col md:flex-row justify-center items-center">
-        <a href="" class="bg-white px-6 py-1 rounded-lg head">Buy Now</a>
-        <a href="" class="bg-white px-6 py-1 rounded-lg head">Chart</a>
-        <a href="" class="bg-white px-6 py-1 rounded-lg head">Telegram</a>
-        <a href="" class="bg-white px-6 py-1 rounded-lg head">RENT GPUS</a>
-        <a href="" class="bg-white px-6 py-1 rounded-lg head">PROVIDE COMPUTE</a>
-    </div>
-      </div>
-    </div>
-    </section>
-</body>
+ 
+
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
+        </body>
 </html>

@@ -32,56 +32,59 @@
     .text-shadow{
         text-shadow: 2px 1px 6px #320045;
     }
+    .z{
+      z-index: -100%;
+    }
 </style>
 <body>
-   <!-- Navbar -->
-   <nav class="bg-gray-800" style="background-image: radial-gradient(circle, #00de8e, #00dda9, #00dbc0, #00d7d2, #00d3de, #00ceec, #00c7f7, #00bfff, #00afff, #2c98ff, #9373ff, #dc1fff);">
-    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="#" class="text-white text-lg font-semibold">Logo</a>
-      <!-- Menu -->
-      <div class="hidden md:block">
-        <ul class="flex space-x-4 text-black head">
-          <li><a href="#" class="hover:text-gray-300">Home</a></li>
-          <li><a href="#" class="hover:text-gray-300">About</a></li>
-          <li><a href="#" class="hover:text-gray-300">Tokenomics</a></li>
-          <li><a href="#" class="hover:text-gray-300">Roadmap</a></li>
-        </ul>
+ <nav class="bg-[url(/bg-1.png)] bg-cover bg-no-repeat p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-white space-x-2 text-lg head font-bold text-center flex justify-center items-center">
+                    <img src="/main.png" class="w-12" alt=""> TAOLIE
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex space-x-4 head">
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Join</a>
+                <a href="dapps.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dapps</a>
+     
+              </div>
+        </div>
+    </nav>
+    
+    <div id="mobile-menu" class="md:hidden head bg-black text-center-blck p-4 hidden z">
+        <a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#about" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#token" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
+        <a href="#road" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
+        <a href="dapps.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Dapps</a>
+    
       </div>
-      <!-- Mobile Menu Toggle -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden head bg-gray-800">
-      <ul class="flex flex-col space-y-4 px-4 py-2">
-        <li><a href="#" class="block text-black hover:text-gray-300">Home</a></li>
-        <li><a href="#" class="block text-black hover:text-gray-300">About</a></li>
-        <li><a href="#" class="block text-black hover:text-gray-300">Tokenomics</a></li>
-        <li><a href="#" class="block text-black hover:text-gray-300">Roadmap</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- JavaScript for toggling mobile menu -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      menuToggle.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-      });
-    });
-  </script>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
     <video src="/video.mp4" autoplay  class="w-screen h-screen object-cover" muted loop playsinline>
     </video>
-    <section class=" absolute top-0 bottom-0 flex flex-col justify-center items-center left-0 right-0 w-screen h-screen ">
+    <section class="absolute top-10 bottom-0 flex flex-col justify-center items-center left-0 right-0 w-screen h-screen ">
         <div class="flex flex-col justify-center items-center" data-aos="fade-up"
         data-aos-duration="3000">
         <div class="">
