@@ -39,10 +39,12 @@
       z-index: -100%;
     }
     html, body{
+      background-color: #120032;
     overflow-x: hidden;
+    background-image: linear-gradient(to right top, #051937, #031843, #0c154d, #1d0f55, #2f005a);
   }
 </style>
-<body>
+<body >
  <nav class="bg-[url(/bg-1.png)] bg-cover bg-no-repeat p-4 relative z-10">
     <div class="container mx-auto flex justify-center items-center">
         <div class="flex justify-center items-center">
@@ -237,7 +239,7 @@
           <h1 class="head text-[30px] text-white">Tokenomics</h1>
       </div>
       <div class="p-12 flex-col flex justify-center items-center">
-        <canvas id="pieChart" width="400" height="400"></canvas>
+        <canvas id="pieChart" width="400" height="400" class="text-white"></canvas>
         <script>
           // Data for the pie chart
           const data = {
@@ -267,6 +269,9 @@
               fontColor: '#fff',
               fontSize: 20,
               fontFamily: 'heads' // Change font family here
+            },
+            labels:{
+              fontColor:'#fff'
             }
           };
           
